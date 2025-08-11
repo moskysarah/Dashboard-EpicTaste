@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+.title {
+  font-family: 'pacifico', cursive;
+}
+
+.text {
+  font-family: 'pacifico', sans-serif;
+}
+p.text {
+  font-family: 'pacifico', sans-serif;
+}
