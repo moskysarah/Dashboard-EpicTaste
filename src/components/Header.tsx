@@ -1,6 +1,6 @@
 export default function Header({ title = "Tableau de bord" }) {
   return (
-    <header className="bg-white shadow px-6 py-4 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow px-6 py-4 flex items-center justify-between md:left-64">
       <h1 className="text-xl font-semibold text-gray-800">{title}</h1>
 
       <div className="flex items-center gap-4">
@@ -12,7 +12,7 @@ export default function Header({ title = "Tableau de bord" }) {
         {/* Profil utilisateur */}
         <div className="flex items-center gap-2">
           <img
-            src="https://i.pravatar.cc/40?img=3"
+            src="/linkdin.png"
             alt="Profil"
             className="w-8 h-8 rounded-full"
           />

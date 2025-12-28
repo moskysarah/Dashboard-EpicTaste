@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Dashboard from './pages/Dashboard'
@@ -17,11 +18,13 @@ import CustomerOrder from './pages/CustomerOrder'
 
 
 export default function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
   return (
     <Router>
       <div className="flex">
-        <Sidebar />
-        <div className="flex-1 bg-white min-h-screen">
+        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <div className="flex-1 bg-white min-h-screen md:ml-64">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/Order" element={<Order />} />
@@ -36,7 +39,7 @@ export default function App() {
             <Route path="/steak" element={<Steak />} />
             <Route path="/pates" element={<Pasta />} />
             <Route path="/strawberry" element={<Strawberry />} />
-            <Route path="/customerorder" element={<CustomerOrder />} /> 
+            <Route path="/customerorder" element={<CustomerOrder />} />
 
           </Routes>
         </div>
